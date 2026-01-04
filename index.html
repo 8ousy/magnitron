@@ -19,6 +19,47 @@
             overflow-x: hidden;
         }
 
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 3rem;
+            background: rgba(255, 255, 255, 0.95);
+            border-bottom: 1px solid #ddd;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            color: #000;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            opacity: 0.5;
+        }
+
         .hero {
             height: 100vh;
             display: flex;
@@ -257,13 +298,35 @@
             .gallery {
                 grid-template-columns: 1fr;
             }
+            .navbar {
+                padding: 1rem 1.5rem;
+            }
+            .nav-logo {
+                font-size: 1rem;
+            }
+            .nav-menu {
+                gap: 1.5rem;
+            }
+            .nav-menu a {
+                font-size: 0.75rem;
+            }
         }
     </style>
 </head>
 <body>
+    <nav class="navbar">
+        <div class="nav-logo">MAGNITRON-1</div>
+        <ul class="nav-menu">
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#specs">Specs</a></li>
+            <li><a href="#preorder">Pre-Order</a></li>
+        </ul>
+    </nav>
+
     <section class="hero">
         <video class="hero-video" autoplay muted loop playsinline>
-            <source src="mag_weeb_l.mp4" type="video/mp4">
+            <source src="https://cdn.jsdelivr.net/gh/user-attachments/assets/your-video-id/magnitron.mp4" type="video/mp4">
         </video>
         <div class="hero-content">
             <div class="logo">MAGNITRON-1</div>
@@ -272,7 +335,7 @@
         <div class="scroll-indicator">↓ SCROLL</div>
     </section>
 
-    <section class="section">
+    <section class="section" id="gallery">
         <div class="container">
             <h2 class="section-title">GALLERY</h2>
             <div class="gallery">
@@ -292,7 +355,7 @@
         </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="features">
         <div class="container">
             <h2 class="section-title">FEATURES</h2>
             <div class="features-grid">
@@ -320,7 +383,7 @@
         </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="specs">
         <div class="container">
             <h2 class="section-title">SPECIFICATIONS</h2>
             <table class="specs-table">
@@ -360,8 +423,8 @@
         </div>
     </section>
 
-    <section class="cta-section">
-        <h2 class="section-title">EXPERIENCE MAGNITRON</h2>
+    <section class="cta-section" id="preorder">
+        <h2 class="section-title">PRE-ORDER MAGNITRON-1</h2>
         <a href="#" class="cta-button">Request Information</a>
     </section>
 
