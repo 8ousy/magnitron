@@ -1,4 +1,12 @@
-<!DOCTYPE html>
+.batch-section {
+                padding: 3rem 1.5rem;
+            }
+            .batch-title {
+                font-size: 1.5rem;
+            }
+            .batch-count {
+                font-size: 1.2rem;
+            }<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -251,6 +259,45 @@
             object-fit: cover;
         }
 
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-number {
+            font-size: 4rem;
+            font-weight: 100;
+            opacity: 0.2;
+            margin-bottom: 1rem;
+        }
+
+        .feature-title {
+            font-size: 1.2rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .feature-desc {
+            font-size: 0.95rem;
+            font-weight: 300;
+            line-height: 1.6;
+            opacity: 0.6;
+        }
+
         .specs-table {
             width: 100%;
             max-width: 900px;
@@ -354,6 +401,9 @@
             .section-title {
                 font-size: 2rem;
             }
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
             .gallery {
                 grid-template-columns: 1fr;
             }
@@ -375,15 +425,6 @@
             .specs-table td {
                 padding: 1rem 1.5rem;
                 font-size: 0.85rem;
-            }
-            .batch-section {
-                padding: 3rem 1.5rem;
-            }
-            .batch-title {
-                font-size: 1.5rem;
-            }
-            .batch-count {
-                font-size: 1.2rem;
             }
         }
     </style>
@@ -408,14 +449,23 @@
 
     <section class="section" id="about">
         <div class="container">
+            <h2 class="section-title">ABOUT</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Magnitron Lab is a collaborative project between Shine Grooves and Gost Zvuk, focused on the design and production of experimental cassette-based musical instruments.</p>
-                    <p>At the core of Magnitron Lab is Andrey Kurokhtin — an engineer and artist who personally designs, engineers, and hand-assembles every Magnitron unit in Yekaterinburg. Each device is built entirely by hand, resulting in a strictly limited output of around 30 units per year.</p>
-                    <p>The current iteration is Magnitron-2, reflecting an ongoing engineering evolution of the instrument. While each new version introduces technical improvements and refinements, every Magnitron generation retains its own sonic character and functional advantages, making each release distinct rather than obsolete.</p>
+                    <p>Introducing the Cassette Mixer <strong>Magnitron-1</strong>, developed by Andrey Kurokhtin, also known as Shine Grooves. The Magnitron-1 is a one-of-a-kind device that allows you to play and mix two cassette decks, each with independent control over pitch, volume, and a three-band equalizer.</p>
+                    <p>Magnitron-1 is not just a mixer; it's a complete musical instrument, opening up new creative possibilities for working with cassette tapes.</p>
+                    <p>Andrey handcrafts each unit in Yekaterinburg as part of a limited series.</p>
                 </div>
-                <div class="about-image">
-                    <img src="front.jpg" alt="Magnitron Front">
+                <div class="about-images">
+                    <div class="about-image large">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'/%3E" alt="Magnitron-1 Front" id="img1">
+                    </div>
+                    <div class="about-image">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'/%3E" alt="Magnitron-1 Detail" id="img2">
+                    </div>
+                    <div class="about-image">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'/%3E" alt="Magnitron-1 Side" id="img3">
+                    </div>
                 </div>
             </div>
         </div>
@@ -429,7 +479,7 @@
             </div>
             <div class="batch-count">7 of 10 spots reserved</div>
             <div class="batch-next">Next batch opens March 2026</div>
-            <a href="https://t.me/your_bot_username" class="batch-button">Join Waitlist</a>
+            <a href="https://t.me/magnitronlab_bot" class="batch-button">Join Waitlist</a>
         </div>
     </section>
 
@@ -437,16 +487,16 @@
         <div class="container">
             <div class="gallery">
                 <div class="gallery-item">
-                    <img src="front-alt.jpg" alt="Front View">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'/%3E" alt="Gallery 1" id="gallery1">
                 </div>
                 <div class="gallery-item">
-                    <img src="back.jpg" alt="Back Panel">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'/%3E" alt="Gallery 2" id="gallery2">
                 </div>
                 <div class="gallery-item">
-                    <img src="side.jpg" alt="Side View">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'/%3E" alt="Gallery 3" id="gallery3">
                 </div>
                 <div class="gallery-item">
-                    <img src="top.jpg" alt="Top View">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'/%3E" alt="Gallery 4" id="gallery4">
                 </div>
             </div>
         </div>
@@ -581,7 +631,7 @@
             <p><strong>Price:</strong> 1400 euros + shipping (50% prepayment required)</p>
             <p>Shipping estimates are approximate and may vary based on your location and current postal conditions.</p>
         </div>
-        <a href="mailto:order@magnitron.example" class="cta-button">Request Information</a>
+        <a href="https://t.me/magnitronlab_bot" class="cta-button">Join Waitlist</a>
     </section>
 
     <footer>
