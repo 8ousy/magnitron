@@ -499,16 +499,73 @@
             padding: 6rem 2rem;
         }
 
-        .cta-info {
-            max-width: 800px;
-            margin: 2rem auto 3rem;
-            font-size: 1rem;
-            line-height: 1.8;
+        .preorder-subtitle {
+            font-size: 0.95rem;
             font-weight: 300;
+            line-height: 1.8;
+            opacity: 0.6;
+            margin: 0 auto 4rem;
+            max-width: 600px;
+            letter-spacing: 0.03em;
         }
 
-        .cta-info p {
-            margin-bottom: 1rem;
+        .preorder-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            max-width: 1000px;
+            margin: 0 auto 2rem;
+            border: 1px solid #ddd;
+        }
+
+        .preorder-card {
+            padding: 2.5rem 2rem;
+            border-right: 1px solid #ddd;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .preorder-card:last-child {
+            border-right: none;
+        }
+
+        .preorder-label {
+            font-size: 0.65rem;
+            font-weight: 400;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            opacity: 0.4;
+        }
+
+        .preorder-value {
+            font-size: 2.6rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            line-height: 1;
+        }
+
+        .preorder-unit {
+            font-size: 1.1rem;
+            font-weight: 400;
+        }
+
+        .preorder-sub {
+            font-size: 0.8rem;
+            font-weight: 300;
+            opacity: 0.4;
+            letter-spacing: 0.03em;
+        }
+
+        .preorder-payment {
+            font-size: 0.8rem;
+            font-weight: 300;
+            opacity: 0.45;
+            letter-spacing: 0.08em;
+            max-width: 1000px;
+            margin: 0 auto 4rem;
+            text-align: center;
         }
 
         .cta-button {
@@ -550,6 +607,20 @@
 
         @media (max-width: 768px) {
             .section-title {
+                font-size: 2rem;
+            }
+            .preorder-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .preorder-card:nth-child(2) {
+                border-right: none;
+            }
+            .preorder-card:nth-child(3) {
+                border-top: 1px solid #ddd;
+                grid-column: 1 / -1;
+                border-right: none;
+            }
+            .preorder-value {
                 font-size: 2rem;
             }
             .gallery {
@@ -901,14 +972,26 @@
 
     <section class="cta-section" id="preorder">
         <h2 class="section-title">PRE-ORDER MAGNITRON</h2>
-        <div class="cta-info">
-            <p>Pre-orders for the fourth production batch are now open. Estimated readiness: early spring.</p>
-            <p><strong>Price:</strong> 1500 EUR + shipping (calculated individually)<br>
-            <strong>Prepayment:</strong> 50% (750 EUR)</p>
-            <p><strong>Payment methods:</strong> EUR / USD / RUB — cash, bank transfer, PayPal, crypto</p>
-            <p><strong>Production time:</strong> 3 months. Production starts after receiving 10 confirmed orders. All customers will be notified once production begins.</p>
-            <p><strong>Shipping:</strong> Worldwide shipping from Yekaterinburg</p>
+        <p class="preorder-subtitle">Pre-orders for the fourth production batch are now open.</p>
+
+        <div class="preorder-grid">
+            <div class="preorder-card">
+                <div class="preorder-label">Price</div>
+                <div class="preorder-value">1500 <span class="preorder-unit">EUR</span></div>
+                <div class="preorder-sub">+ Worldwide Shipping</div>
+            </div>
+            <div class="preorder-card">
+                <div class="preorder-label">Prepayment</div>
+                <div class="preorder-value">50<span class="preorder-unit">%</span></div>
+                <div class="preorder-sub" style="text-align:center;">Cash · PayPal · Crypto<br>Bank Transfer</div>
+            </div>
+            <div class="preorder-card">
+                <div class="preorder-label">Production</div>
+                <div class="preorder-value">~3 <span class="preorder-unit">months</span></div>
+                <div class="preorder-sub">Starts after 10 confirmed orders</div>
+            </div>
         </div>
+
         <a href="https://t.me/magnitronlab_bot" class="cta-button" target="_blank">Join Waitlist</a>
     </section>
 
