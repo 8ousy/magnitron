@@ -87,14 +87,13 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            min-width: 100%;
-            min-height: 100%;
+            max-width: 70%;
+            max-height: 80%;
             width: auto;
             height: auto;
             transform: translate(-50%, -50%);
             z-index: 0;
-            opacity: 0.3;
-            object-fit: cover;
+            object-fit: contain;
         }
 
         .scroll-indicator {
@@ -293,7 +292,7 @@
         .progress-fill {
             height: 100%;
             background: #000;
-            width: 70%;
+            width: 90%;
             transition: width 0.3s ease;
         }
 
@@ -332,7 +331,7 @@
 
         .gallery {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
             margin-top: 4rem;
         }
@@ -553,7 +552,7 @@
                 font-size: 2rem;
             }
             .gallery {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
             }
             .navbar {
                 padding: 1rem;
@@ -622,9 +621,7 @@
     </nav>
 
     <section class="hero">
-        <video class="hero-video" autoplay muted loop playsinline>
-            <source src="mag_weeb_l.mp4" type="video/mp4">
-        </video>
+        <img class="hero-video" src="product-top.jpg" alt="Magnitron-2">
         <div class="scroll-indicator">↓ SCROLL</div>
     </section>
 
@@ -637,7 +634,7 @@
                     <p>The current iteration is Magnitron-2, reflecting an ongoing engineering evolution of the instrument. While each new version introduces technical improvements and refinements, every Magnitron generation retains its own sonic character and functional advantages, making each release distinct rather than obsolete.</p>
                 </div>
                 <div class="about-image">
-                    <img src="front.jpg" alt="Magnitron Front">
+                    <img src="product-3q.jpg" alt="Magnitron-2">
                 </div>
             </div>
         </div>
@@ -685,7 +682,7 @@
             <div class="progress-bar">
                 <div class="progress-fill"></div>
             </div>
-            <div class="batch-count">7 of 10 spots reserved</div>
+            <div class="batch-count">9 of 10 spots reserved</div>
             <div class="batch-next">Next batch opens March 2026</div>
             <a href="https://t.me/magnitronlab_bot" class="batch-button">Join Waitlist</a>
         </div>
@@ -695,16 +692,22 @@
         <div class="container">
             <div class="gallery">
                 <div class="gallery-item">
-                    <img src="front-alt.jpg" alt="Front View">
+                    <img src="product-3q.jpg" alt="Three-Quarter View" loading="lazy">
                 </div>
                 <div class="gallery-item">
-                    <img src="back.jpg" alt="Back Panel">
+                    <img src="product-front.jpg" alt="Front View" loading="lazy">
                 </div>
                 <div class="gallery-item">
-                    <img src="side.jpg" alt="Side View">
+                    <img src="product-cassettes.jpg" alt="With Cassettes Loaded" loading="lazy">
                 </div>
                 <div class="gallery-item">
-                    <img src="top.jpg" alt="Top View">
+                    <img src="product-back.jpg" alt="Back Panel" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="macro-knobs.jpg" alt="Knobs Detail" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="macro-vu.jpg" alt="VU Meters Detail" loading="lazy">
                 </div>
             </div>
         </div>
@@ -855,10 +858,40 @@
                         No, you can't.
                     </div>
                 </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>What is the pitch range?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        ±50% from the nominal tape speed.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Is there a warranty?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Yes, we offer a 1-year warranty. Warranty service is free for defects not caused by the customer (e.g., no impact or drop damage). Shipping costs are the customer's responsibility.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Are removable jog wheels included?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Yes, removable jog wheels are included with every unit. You can use them to cue tracks and perform tape scratching.
+                    </div>
+                </div>
             </div>
 
             <div class="manual-download">
-                <a href="#" class="download-btn">DOWNLOAD MANUAL</a>
+                <a href="MAGNITRON_2_USER_MANUAL_EN.pdf" class="download-btn" download>DOWNLOAD MANUAL (PDF)</a>
             </div>
         </div>
     </section>
