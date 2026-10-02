@@ -743,6 +743,11 @@
                                 <iframe src="https://www.youtube.com/embed/bhLdm2EcAoM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                         </div>
+                        <div class="video-slide">
+                            <div class="video-wrapper">
+                                <iframe src="https://www.youtube.com/embed/NBEcnb05jwM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="carousel-controls">
@@ -753,6 +758,7 @@
                     <div class="indicator active" onclick="goToSlide(0)"></div>
                     <div class="indicator" onclick="goToSlide(1)"></div>
                     <div class="indicator" onclick="goToSlide(2)"></div>
+                    <div class="indicator" onclick="goToSlide(3)"></div>
                 </div>
             </div>
         </div>
@@ -1009,7 +1015,7 @@
 
     <script>
         let currentSlide = 0;
-        const totalSlides = 3;
+        const totalSlides = 4;
 
         function updateCarousel() {
             const track = document.querySelector('.carousel-track');
